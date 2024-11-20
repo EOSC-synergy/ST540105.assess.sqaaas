@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/profskipulag/ST540105:
+      branch: main
+      repo: https://github.com/profskipulag/ST540105
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/profskipulag/ST540105 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.crabby-cream-earwig.sh
+        container: qc.acc_muggy-orchid-hound
+  QC.Doc:
+    repos:
+      github.com/profskipulag/ST540105 find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.gloppy-razzmatazz-pig.sh
+        container: qc.doc_foggy-grey-lobster
+      github.com/profskipulag/ST540105 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.randy-ecru-salamander.sh
+        container: qc.doc_snippy-red-toad
+      github.com/profskipulag/ST540105 markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.scummy-cream-bonobo.sh
+        container: qc.doc_droopy-olive-hyena
+  QC.Lic:
+    repos:
+      github.com/profskipulag/ST540105 licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.zippy-teal-butterfly.sh
+        container: qc.lic_clammy-orange-abyssinian
+  QC.Sec:
+    repos:
+      github.com/profskipulag/ST540105 bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.slaphappy-asparagus-wallaby.sh
+        container: qc.sec_clammy-violet-jackal
+  QC.Sty:
+    repos:
+      github.com/profskipulag/ST540105 flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.gloppy-scarlet-barnacle.sh
+        container: qc.sty_ugly-lemon-affenpinscher
+  QC.Uni:
+    repos:
+      github.com/profskipulag/ST540105 pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.gloppy-amethyst-spaniel.sh
+        container: qc.uni_gummy-ochre-macaque
+  QC.Ver:
+    repos:
+      github.com/profskipulag/ST540105 get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleazy-russet-nightingale.sh
+        container: qc.ver_scanty-purple-gopher
+timeout: 5400

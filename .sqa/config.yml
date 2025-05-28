@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       github.com/profskipulag/ST540105 git:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-cream-earwig.sh
-        container: qc.acc_muggy-orchid-hound
+        - /usr/bin/env sh .sqa/script.gamy-smalt-squirrel.sh
+        container: qc.acc_queasy-pumpkin-coyote
   QC.Doc:
     repos:
       github.com/profskipulag/ST540105 find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-razzmatazz-pig.sh
-        container: qc.doc_foggy-grey-lobster
+        - /usr/bin/env sh .sqa/script.crabby-blue-grouse.sh
+        container: qc.doc_scaly-jade-hippopotamus
       github.com/profskipulag/ST540105 git:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-ecru-salamander.sh
-        container: qc.doc_snippy-red-toad
+        - /usr/bin/env sh .sqa/script.thirsty-dandelion-capybara.sh
+        container: qc.doc_tasty-cyan-tang
       github.com/profskipulag/ST540105 markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.scummy-cream-bonobo.sh
-        container: qc.doc_droopy-olive-hyena
+        - /usr/bin/env sh .sqa/script.droopy-chestnut-mongrel.sh
+        container: qc.doc_pretty-chestnut-barnacle
   QC.Lic:
     repos:
       github.com/profskipulag/ST540105 licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-teal-butterfly.sh
-        container: qc.lic_clammy-orange-abyssinian
+        - /usr/bin/env sh .sqa/script.gimpy-russet-forest.sh
+        container: qc.lic_wimpy-cinnabar-oriole
   QC.Sec:
     repos:
       github.com/profskipulag/ST540105 bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-asparagus-wallaby.sh
-        container: qc.sec_clammy-violet-jackal
+        - /usr/bin/env sh .sqa/script.woolly-ecru-termite.sh
+        container: qc.sec_smelly-smalt-fousek
   QC.Sty:
     repos:
       github.com/profskipulag/ST540105 flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-scarlet-barnacle.sh
-        container: qc.sty_ugly-lemon-affenpinscher
+        - /usr/bin/env sh .sqa/script.tasty-violet-avocet.sh
+        container: qc.sty_scanty-olivine-moorhen
   QC.Uni:
     repos:
       github.com/profskipulag/ST540105 pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-amethyst-spaniel.sh
-        container: qc.uni_gummy-ochre-macaque
+        - /usr/bin/env sh .sqa/script.messy-smalt-buzzard.sh
+        container: qc.uni_flaky-bistre-paradise
   QC.Ver:
     repos:
       github.com/profskipulag/ST540105 get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-russet-nightingale.sh
-        container: qc.ver_scanty-purple-gopher
+        - /usr/bin/env sh .sqa/script.wimpy-cinnabar-kingfisher.sh
+        container: qc.ver_cozy-aqua-mule
 timeout: 5400
